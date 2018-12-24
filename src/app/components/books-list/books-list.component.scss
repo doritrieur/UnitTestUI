@@ -1,0 +1,27 @@
+// mat-list-item {
+//     background: #ffe5e5;
+//     padding: 5px;
+//     margin-left: 35px;
+// }
+
+.details, .accHeader {
+    background: #ffe5e5;
+    padding: 5px;
+    margin-left: 35px;
+    font-family: fantasy;
+    margin: 20px;
+}
+
+
+mat-expansion-panel {
+width: 50%;
+
+}
+
+
+.accHeader > {
+    align-items: flex-start;
+    text-align: center
+    
+}
+

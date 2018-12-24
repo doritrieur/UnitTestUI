@@ -1,0 +1,96 @@
+
+  <!-- <h4>Select Filter</h4> -->
+  <mat-form-field  >
+    <mat-select placeholder="Select Filter" [(value)]="selected">
+      <mat-option *ngFor="let book of booksList" [value]="book.author">
+        {{book.author}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!-- <span>You selected: {{selected}}</span> -->
+  <span><button mat-flat-button color="primary" (click) = "filterListByAuthor(selected)" value="Click">Filter</button></span>
+  
+  <span><button mat-flat-button color="primary" (click) = "sortByName()" value="Click">Sort By Name</button></span>
+  
+  <!-- <span class="mat-list">List of books</span> -->
+  <mat-divider></mat-divider>
+ 
+  <!-- <div *ngIf="showFullList" > -->
+  <mat-accordion *ngFor="let book of books">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header class="accHeader">
+        <mat-panel-title >
+            {{book.name}}
+        </mat-panel-title>
+        <mat-panel-description>
+            {{book.id}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+       
+      <!-- <p class="details">id: {{book.id}}</p> -->
+    
+      <p class="details">author: {{book.author}}</p>
+  
+      <p class="details">published year: {{book.publishYear}}</p>
+  
+      <p class="details">price: {{book.price}}</p>
+  
+      <p class="details">in stock: {{book.stockCount}}</p>
+  
+    </mat-expansion-panel>
+  </mat-accordion>
+<!-- </div> -->
+  <!-- <mat-list  *ngIf="showFullList">
+    <mat-list-item *ngFor="let book of books">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title class = "header">
+            Details of book {{book.name}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+    
+        <p class="details">id: {{book.id}}</p>
+    
+        <p class="details">author: {{book.author}}</p>
+    
+        <p class="details">published year: {{book.publishYear}}</p>
+    
+        <p class="details">price: {{book.price}}</p>
+    
+        <p class="details">in stock: {{book.stockCount}}</p>
+    
+     
+      </mat-expansion-panel>
+    </mat-list-item>
+     <br> <br>
+  </mat-list> -->
+
+
+  <!-- <mat-list  *ngIf="!showFullList">
+    <mat-list-item *ngFor="let book of books">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title class = "header">
+            Details of book {{book.name}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+    
+        <p class="details">id: {{book.id}}</p>
+    
+        <p class="details">author: {{book.author}}</p>
+    
+        <p class="details">published year: {{book.publishYear}}</p>
+    
+        <p class="details">price: {{book.price}}</p>
+    
+        <p class="details">in stock: {{book.stockCount}}</p>
+    
+     
+      </mat-expansion-panel>
+    </mat-list-item>
+     <br> <br>
+  </mat-list> -->
+
+  
+
+
