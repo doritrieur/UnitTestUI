@@ -35,14 +35,14 @@ filterByAuthor(author: string) {
 
 sortByID() {
   return this.books = this.http
-  .get<Book[]>(this.sortByNameURL);
+  .get<Book[]>(this.sortByIDURL);
 }
 
 
 
 sortByName() {
   return this.books = this.http
-  .get<Book[]>(this.sortByIDURL);
+  .get<Book[]>(this.sortByNameURL);
 }
   }
 

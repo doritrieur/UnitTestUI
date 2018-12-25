@@ -11,8 +11,11 @@ import {
   MatSelectModule,
   MatListModule,
   MatExpansionModule,
-  MatDividerModule
-} from '@angular/material';
+  MatDividerModule,
+  MatTableModule,
+  MatInputModule,
+ } from '@angular/material';
+ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -31,7 +34,11 @@ import {
     MatButtonModule,
     MatSelectModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatTableModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [BooksService],
   bootstrap: [AppComponent]
