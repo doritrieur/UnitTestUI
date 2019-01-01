@@ -21,11 +21,11 @@ export class BooksService {
      this.books = this.http
     .get<Book[]>(this.defaultURL);
 
-    console.log(this.books + ' Observable books 1');
   }
 
   getAllBooks() {
-    return this.books;
+    return this.books = this.http
+    .get<Book[]>(this.defaultURL);
   }
 
 filterByAuthor(author: string) {
